@@ -47,7 +47,9 @@ Minesweeper:: ~Minesweeper()
 void Minesweeper::setMines(int mines)
 {
 
-  int count=0; //use to set the number of mines
+  //	CAUTION: BEFORE YOU CAN USE THIS FUNCTION, YOU NEED TO INCLUDE TIME.H LIBRARY (#include <time.h> and #include <stdlib.h> on main.cpp)
+  int count =0; //use to set the number of mines
+  srand (time(NULL));
   while(count < mines)
   {
     int tempRow = rand() % (m_row-1);
